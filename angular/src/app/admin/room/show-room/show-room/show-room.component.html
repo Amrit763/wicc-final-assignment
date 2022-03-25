@@ -1,0 +1,40 @@
+<nav class="navbar navbar-dark bg-dark fixed-top">
+
+    <a class="navbar-brand p-2" [routerLink]="['/admin/admin-navbar']"><i class="bi bi-arrow-left-circle fa-lg"></i></a>
+
+</nav>
+
+<!-- <br> {{topRooms[0].address}} {{normalRooms[0].address}} alllRoom:::::{{allRooms[0].address}} -->
+
+<div class="container mx-auto p-2">
+    <table class="table ">
+        <thead class="thead-light m-2 p-3" style="background-color: 	rgb(211,211,211);">
+            <tr>
+                <th scope="col" class="p-3">Address</th>
+                <th scope="col" class="p-3">Price</th>
+                <th scope="col" class="p-3">Number of Room</th>
+                <th scope="col" class="p-3">Description</th>
+                <th scope="col" class="p-3">Categories</th>
+                <th scope="col" class="p-3">Action</th>
+
+            </tr>
+        </thead>
+        <tr *ngFor="let room of allRooms">
+            <td class="p-3">{{room.address}}</td>
+            <td class="p-3">{{room.price}}</td>
+            <td class="p-3">{{room.numberOfRoom}}</td>
+            <td class="p-3">{{room.description}}</td>
+            <td class="p-3">{{room.categories}}</td>
+            <!-- <td> -->
+            <button type="button" class="btn btn-warning m-2" routerLink='/admin/edit-room/rm/{{room._id}}'>
+                <i class='far fa-edit' ></i>
+            </button>
+            <button type="button" class="btn btn-danger" (click)="deleteRoom(room)">
+                <i class='fas fa-trash'></i>
+            </button>
+
+            <!-- </td> -->
+
+        </tr>
+    </table>
+</div>

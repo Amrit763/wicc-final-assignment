@@ -1,0 +1,13 @@
+.containers {
+    width: 90%;
+    margin: auto;
+    padding: auto;
+}
+
+.partners img {
+    transition: all .3s ease;
+}
+
+.partners img:hover {
+    box-shadow: 0 0 10px 1 px #dbdbdb;
+}

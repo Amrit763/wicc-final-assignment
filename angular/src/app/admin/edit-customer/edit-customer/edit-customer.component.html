@@ -1,0 +1,33 @@
+<div class="container">
+    <form [formGroup]="registerForm">
+        <h3>
+            Update to your account
+        </h3>
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" value='{{user.name}}' name="name" placeholder="Enter name" formControlName="name">
+        </div>
+        <!-- {{user.name}} -->
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" class="form-control" id="username" value='{{user.username}}' name="username" placeholder="Enter username" formControlName="username">
+        </div>
+        <div class="form-group">
+            <label for="phoneNumber">Phone Number</label>
+            <input type="number" class="form-control" id="phoneNumber" value='{{user.phoneNumber}}' name="phoneNumber" placeholder="Enter phone number" formControlName="phoneNumber">
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" class="form-control" id="email" value='{{user.email}}' name="email" placeholder="Enter email address" formControlName="email">
+            <div class="danger" *ngIf="registerFormControl['email'] && registerFormControl['email'].invalid && registerFormControl['email'].touched">
+                <div *ngIf="registerFormControl['email'].errors?.['required']">required field*</div>
+                <div *ngIf="registerFormControl['email'].errors?.['email']">not a valid email</div>
+            </div>
+        </div>
+
+        <br>
+        <button type="submit" class="btn btn-primary" (click)="update()">Submit</button>
+
+    </form>
+</div>

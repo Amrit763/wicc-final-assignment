@@ -1,0 +1,21 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-between">
+    <a class="navbar-brand p-2" [routerLink]="['/users/dashboard']">Room Finder</a>
+
+    <form class="form-inline my-2 my-lg-0">
+
+        <div class="input-group p-l-4">
+            <div class="form-group ">
+                <input type="text" class="form-control" placeholder="search ">
+
+            </div>
+            <button type="button" class="btn btn-primary">
+            <i class="fas fa-search"></i>
+            </button>
+        </div>
+    </form>
+    <a class="btn btn-primary navbar-nav ml-auto p-2 m-2" name="logout" (click)="logOut()">
+        <!-- <i class="fa fa-sign-out"></i> -->
+        logout
+
+    </a>
+</nav>

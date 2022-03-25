@@ -1,0 +1,70 @@
+<div class="sidebar-nav">
+
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+        <!-- Mobile Menu Toggle Button -->
+        <button class="navbar-toggler menuIcon" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+
+
+        <!-- Menus List -->
+
+        <div class="bg-light offcanvas offcanvas-start shadow" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+
+            <div class="offcanvas-body">
+
+                <ul class="navbar-nav">
+
+                    <li>
+                        <a [routerLink]="['/admin/customer']"> <span class="item-text">Customer</span></a>
+                    </li>
+
+                    <li>
+                        <a [routerLink]="['/admin/room']"><span class="item-text">Add Room</span></a>
+                    </li>
+
+                    <li>
+                        <a [routerLink]="['/admin/booking']"><span class="item-text">Booking</span></a>
+                    </li>
+
+                    <li>
+                        <a [routerLink]="['/admin/show-room']"> <span class="item-text">Show Room</span></a>
+                    </li>
+
+
+                </ul>
+
+            </div>
+
+        </div>
+
+        <!-- logout button ho -->
+        <div class="btn-group " style="float: inline-end;">
+            <a [routerLink]="['/users/dashboard']" class=" text-white text-decoration-none p-2" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-box-arrow-left fa-lg p-2"></i>
+            </a>
+        </div>
+    </nav>
+    <div class="sideNav">
+        <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:25%">
+            <!-- <h3 class="w3-bar-item">Menu</h3> -->
+            <br>
+            <br><br>
+            <a [routerLink]="['/admin/customer']" class="w3-bar-item w3-button"> <span class="item-text">Customer</span></a>
+            <a [routerLink]="['/admin/room']" class="w3-bar-item w3-button"><span class="item-text">Add Room</span></a>
+            <a [routerLink]="['/admin/show-room']" class="w3-bar-item w3-button"> <span class="item-text">Show Room</span></a>
+            <a [routerLink]="['/admin/booking']" class="w3-bar-item w3-button"><span class="item-text">Booking</span></a>
+        </div>
+
+    </div>
+
+
+</div>
+<h1>
+    <br>
+    <br class="here"> Welcome to Admin Dashboard
+
+</h1>
